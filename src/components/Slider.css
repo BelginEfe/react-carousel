@@ -1,0 +1,99 @@
+
+
+
+.container {
+    max-width: 740px;
+    height: 400px;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    position: relative;
+    margin: 150px 20px 0;
+}
+
+@media (min-width: 820px) {
+    .container  {
+        margin: 150px auto 0;
+    }
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 5px;
+    transition: opacity  ease-in-out  0.4s;
+}
+
+.full-opacity {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.btn-slide {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f1f1f1;
+    border: 1px solid rgba(34, 34, 34, 0.287);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: translateY(-60%);
+}
+
+@media (min-width: 420px) {
+    .btn-slide {
+        width: 60px;
+        height: 60px;
+    }
+
+    .btn-slide img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.btn-slide img {
+    height: 20px;
+    width: 20px;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.dots-container {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    display: flex;
+    transform: translateX(-50px);
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-inline-end: 5px;
+    border : 3px solid #f1f1f1;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.dot.chosen {
+    background: rgb(32, 32, 32);
+}
